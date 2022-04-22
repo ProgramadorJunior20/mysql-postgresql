@@ -1,0 +1,81 @@
+
+/*
+-- Creación de tablas
+-- Agregar columnas a las tablas 
+*/
+CREATE TABLE IF NOT EXISTS employees(
+	id INT,
+);
+
+-- Tipos de datos: CHAR, VARCHAR, TEXT
+CREATE TABLE IF NOT EXISTS employees(
+	id INT,
+	name VARCHAR(250),
+	married BOOLEAN,
+	genre CHAR(1)
+);
+
+-- Insertar datos
+INSERT INTO employees (id, name, married, genre) VALUES (1, 'Jeff', TRUE, 'M'); 
+
+/*
+-- Tipos de datos: boolean
+*/
+CREATE TABLE IF NOT EXISTS employees(
+	id INT,
+	married BOOLEAN
+);
+
+INSERT INTO employees (id, married) VALUES (1, TRUE);
+INSERT INTO employees (id, married) VALUES (2, FALSE);
+
+-- Tipo de dato numerico
+CREATE TABLE IF NOT EXISTS employees(
+	id INT,
+	name VARCHAR(250),
+	married BOOLEAN,
+	genre CHAR(1),
+	salary NUMERIC(9, 2)
+);
+
+-- Insertar datos
+INSERT INTO employees (id, name, married, genre, salary) VALUES (2, 'Jeff', TRUE, 'M', 29689.23);
+
+-- Tipo de dato: DATE
+CREATE TABLE IF NOT EXISTS employees(
+	id INT,
+	name VARCHAR(250),
+	married BOOLEAN,
+	genre CHAR(1),
+	salary NUMERIC(9, 2),
+	birth_date DATE
+);
+
+-- Insertar datos
+INSERT INTO employees (id, name, married, genre, salary, birth_date) VALUES (2, 'Jeff', TRUE, 'M', 29689.23, '2000-02-21');
+
+-- Tipo de dato: TIME
+CREATE TABLE IF NOT EXISTS employees(
+	id INT,
+	name VARCHAR(250),
+	married BOOLEAN,
+	genre CHAR(1),
+	salary NUMERIC(9, 2),
+	birth_date DATE,
+	start_at TIME
+);
+INSERT INTO employees (id, name, married, genre, salary, birth_date, start_at) 
+VALUES (2, 'Jeff', TRUE, 'M', 29689.23, '2000-02-21', '08:00:00');
+
+-- Renombrar tabla
+ALTER TABLE IF EXISTS employees RENAME TO employees_2021;
+
+-- Agregar columnas a las tablas
+
+
+-- Ver datos de una tabla
+select * from employees;
+
+
+-- Borrar tabla
+DROP TABLE IF EXISTS employees;
