@@ -175,3 +175,18 @@ select * from employees;
 
 -- Borrar una tabla
 DROP TABLE IF EXISTS employees;
+
+-- Tipos de datos
+INT
+BOOLEAN
+CHAR, VARCHAR, TEXT
+NUMERIC
+DATE 
+TIME
+SERIAL
+
+-- Restricciones en las colunmas de la tablas
+PRIMARY KEY 
+NOT NULL 
+UNIQUE 
+CHECK
